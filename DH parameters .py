@@ -1,7 +1,7 @@
 from math import sin, cos
 from numpy import *
 from functools import reduce
-import time
+
 
 x = int(input("How many degree of Freedom You want to calculate?"))
 a = []
@@ -28,6 +28,7 @@ for i in range(x):
     a.append(DH_parameters(t1, t2, t3, t4))
 
 ans = reduce (lambda x, y: matrix(x) * matrix(y) , a)
+print ("The Total Transformstion Matrix is")
 print (ans)
 
 
